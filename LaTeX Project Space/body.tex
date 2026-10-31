@@ -1,0 +1,220 @@
+\section{Introduction}
+Sex trafficking forces individuals to perform sexual services against their will, often accompanied by an involuntary relocation of the exploited person.\footnote{For more information, see \href{https://www.oed.com/dictionary/sex-trafficking_n}{OED: Sex Trafficking}} Worldwide, there are an estimated 27 million people being manipulated for labor, services, and sex.\footnote{\cite{traffickingreport}} Sex traffickers target vulnerable and marginalized individuals, where women and girls account for 96\% of cases. \footnote{\cite{ICAT}} Traffickers exploit people who are economically disadvantaged and have little control over their economic outcomes (\textit{economic agency}). Factors that can increase sex trafficking risk include poverty, lack of social support, drug use, history of sexual abuse, being academically off-track, living in a shelter or group home, being an immigrant, or having a disability.\footnote{\cite{riskfactors}}  \\
+\indent Abortion access can affect women's \textit{economic agency}. As women have improved reproductive healthcare, they have more control over when they have children \citep{baileyandlindo}. This choice of being able to plan ahead allows for advances in employment. When women have children early in their careers, they reduce their working hours and firms invest less into their success \citep{BlauandKhan}. Then, young mothers are disadvantaged in the workforce and have less opportunity for promotions or job migration. In this sense, it is possible that as abortion laws become stricter, women lose economic agency, making them more at-risk for sex trafficking. \\
+\indent Similarly, advancements in socioeconomic status often increase an individual’s exposure to information and civic engagement, increasing their awareness of social injustices.\footnote{\cite{UrbanInstitute}} As an individual becomes more aware of trafficking, they have greater knowledge to protect themselves therefore lowering their risk. Thus, reductions in economic agency through abortion access restrictions may decrease awareness and  indirectly raise the risk of sex trafficking. \\
+\indent Researching events that may impact sex trafficking awareness is crucial in identifying periods in which certain individuals or populations may be more at risk. Sex trafficking is a clear form of severe exploitation with lifelong consequences. Along with negative social implications, there comes negative economic externalities, such as lost human capital from formal labor sectors. Sex trafficking is insufficiently studied, especially in the field of economics. The illegal sex market is massive and rapidly growing, so why has public attention (and research) not kept pace? 
+% DELETED PART: As women lose economic agency, they are forced into situations that put them at risk by seeking outside assistance and likely informal work. An individual could become more dependent on family members, friends, or significant others who may have ill intentions. Alternatively, a young mother may see a job ad posted online that turns out to be a fake, human trafficking scheme.  
+\subsection{Procedure and Overview of Results}
+\indent I study the effect of the overturning of \textit{Roe v. Wade} on sex trafficking awareness. The period after \textit{Roe} is referred to as post-\textit{Dobbs}, as \textit{Dobbs v. Jackson Women’s Health Organization} \citep{dobbs2022} is the case ruling that overturned \textit{Roe v. Wade} \citep{roe_v_wade}. The overturning of \textit{Roe} has significantly decreased abortion access throughout the country. More than 75 independent abortion clinics have shut down in the U.S. from 2022-2024. In addition, 155,000 patients traveled out of state for abortion care due to in-state inaccessibility in 2024, which doubles the pre-\textit{Dobbs} estimate of 81,000 in 2020 \citep{kff2026abortion}. \\
+\indent In this paper, I construct an index variable of female economic agency (FEA) and create a comprehensive dataset ranking abortion restriction across the U.S. from 2015-2025. I then incorporate Google Search Trend data as a proxy for awareness, and implement state and year fixed effects in difference-in-difference regressions. My index variable spans 2015-2023 and consists of 6 parts including: the percent of population living below poverty, total personal income (TPI), educational attainment, health insurance coverage, labor force participation rate, and age at first marriage (all collected for female populations \textit{only}). FEA is averaged and standardized into one data point for each state-year combination, yielding 450 observations. \\
+\indent My abortion restriction ranking dataset ranks each state-year combination on a scale from 0-7, with 0 being no restrictions and 7 being a full-ban on abortions. I identify 25 states whose abortion restrictions have changed (either increased or decreased) as a result of the overturning of \textit{Roe}. In contrast, there are 25 control states in which the abortion restriction has remained constant from 2015 and 2025. I use these data in two difference-in-difference (DiD) specifications; one simple DiD; and one that allows for continuous, staggered treatment. I find that as abortion restriction increases, there is a statistically significant increase in sex trafficking awareness post-\textit{Dobbs}, compared to states whose abortion restriction has remained constant. This effect is the strongest immediately post-\textit{Dobbs}, with the effect fading as we move further away from the overturning of \textit{Roe} in 2022, ultimately revealing that awareness slowly dissipates as public interest declines. Controlling for FEA does not change my estimates. Due to data limitations, I can only assess the immediate post-\textit{Dobbs} effect, so it is likely that FEA does not contain enough data to find significant results. \\
+\indent Section 2 of my research covers the related literature on sex trafficking, including the sources that provide the variation in FEA. Section 3 illustrates the methodology beginning with data collection and the empirical specifications. Section 4 reveals my results and section 5 offers concluding remarks. 
+
+\section{Related Literature}
+To provide context for the analysis in this paper, this section reviews relevant literature and existing research related to the topic. Economic research on sex trafficking is slim, primarily due to the complications of data collection \citep{Kristiina}. Difficulties typically arise in measuring human trafficking as a result of inconsistent definitions \citep{Hanson}. Typically, human trafficking is studied as a whole, as opposed to being disaggregated into its various forms. \cite{omar} study human trafficking and immigration patterns where they find that regional migration flows are associated with a higher individual likelihood of being trafficked, and that 20\% of reported human trafficking survivors experienced sex trafficking. \cite{leeandpersson} propose a theoretical model of semi-coerced sex markets. They find that by combining two pre-existing models, the Dutch and Swedish models, we can optimally deter sex trafficking while protecting the right to voluntary sex work through licensing prostitutes (Dutch) and criminalizing Johns who purchase sex from those unlicensed (Swedish). \cite{Jang} use a count time series regression to investigate the driving economic factors for sex trafficking conviction in the United States, finding that the driving factors are the consumer price index (CPI), labor market regulations, and changes in immigration policy. As the CPI rises, conviction counts decrease after approximately 5 months, suggesting that greater economic stress reduces trafficking detection. Changes in labor market regulations and immigration policy increase convictions. While altering immigration policy has an immediate effect, labor market regulations take longer to be reflected through conviction counts due to the process of slower institutional changes. \cite{Nyqviststiina} study individual-level data of survivors of child sex trafficking and find that girls who are more likely to be trafficked come from larger households with more daughters, and tend to be more risk-loving. \\
+\indent The papers that provide sources of my female economic agency variation are \cite{baileyandlindo} and \cite{baileyanddiprete}. \cite{baileyandlindo} investigate how access to various forms of contraception affected women’s education, marital decisions, fertility, and contraception use. The authors find that with increased access, women are having children later in life, there is higher use of contraception, women are getting married 3.7 years later, and educational attainment increases. \cite{baileyanddiprete} explore how the gender wage gap, educational attainment, gender stereotypes and cultural norms, fertility rates and family structure, work habits, and overall economic independence of women has changed over the past 50 years. Women are now more likely to attain an advanced degree compared to men; the gender wage gap has narrowed, though progress has slowed; fertility rates have declined; and marriage rates have fallen. While women remain underrepresented in high-paying jobs, the overall economic independence of women has improved.
+\section{Methodology}
+\subsection{Data}
+\indent I create a comprehensive data set including all 50 U.S. states, ranking their abortion restrictiveness  across the years 2015-2025. The restrictive scale is sourced from Britannica, though slightly modified.\footnote{\cite{britannica}, \textit{See Table 6 in the Appendix for changes.}} The scale is as follows: 0- no abortion laws/legal with no gestational limit, 1- legal before viability, 2- bans at/before 24 weeks, 3- bans at/before 22 weeks, 4- bans at/before 15 weeks, 5- bans at/before 12 weeks, 6- bans at/before 6 weeks, and lastly, 7- full ban. See Figure 1 below for a mapping of each state's pre-\textit{Dobbs} restrictiveness. See Figure 2 below for a mapping of each state's post-\textit{Dobbs} restrictiveness. \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.73\linewidth]{before.png}
+    \label{fig:before}
+    \caption{Abortion Restrictiveness by State pre-\textit{Dobbs} Decision (the redder the state is, the stricter the abortion laws are).}
+\end{figure}
+The reason for such categories stems from state interpretation of a viable fetus. While there is much debate, the general time frame for viability is somewhere between 20-28 weeks.\footnote{For more information, see \href{https://www.acog.org/advocacy/facts-are-important/understanding-and-navigating-viability}{ACOG: Viability}} Therefore, some states, like California, protect abortion rights until ``fetal viability'' as opposed to enforcing a strict cut off like Georgia in the pre-\textit{Dobbs} era banning at 22 weeks. By declaring ``fetal viability,'' there is more freedom and protection in the right to abortions. Most states' abortion restrictions come with certain exceptions to those laws—like in the case of rape or incest, or when the mother's life is at risk. This ranking is based on the legal rights of citizens who do not meet those qualifications. Therefore, the restrictiveness ranking is relevant to healthy pregnancies resulting from consensual sex. I rank by researching individual states over each respective year from 2015-2025, using various websites from universities, national databases, local news sources, or findings from other researchers interested in abortion rights. \footnote{For full data set and citations, contact the author.}
+% click \href{https://lmu.box.com/shared/static/38vr1acrze2oigxdk2w3qepxxr8n4lch.xlsx}{here}} 
+\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.73\linewidth]{after.png}
+    \caption{Abortion Restrictiveness by State post-\textit{Dobbs} Decision (the redder the state is, the stricter the abortion laws are).}
+\end{figure}
+\indent For female economic agency (FEA), I create an index variable in which I include average educational attainment, median age at first marriage, female labor force participation rate, average total personal income, health insurance coverage, and percent of female population living below poverty. See Table 1 for descriptive statistics. \cite{baileyanddiprete} show that female educational attainment increases with economic success. There is a clear relationship between education and economic agency: higher education is correlated with higher income, increasing an individual’s economic participation and choice. \cite{baileyanddiprete} also demonstrate that overall economic success increases as marital rates decrease. I include median age at first marriage as later marriage allows more time for educational attainment, career advancement, and asset accumulation. I include female labor force participation rate as having a source of income allows for women to gain economic agency by having a greater say in their finances and economic decisions; they do not have to be dependent on others for their survival. Similarly, as average total personal income rises, so does FEA. Average total personal income is 2025 inflation adjusted, so incomes are comparable across years. Negative values demonstrate the individual reported a net income loss and a value of 1 equates to breaking even. I include health insurance coverage in FEA as when individuals are covered by health insurance, they have more financial freedom. Knowing you have a safety net for expensive, unexpected life events relieves financial stress and allows for increased investments. Instead of saving large sums in the event you must bear all financial responsibility for a health crisis, you can share the financial burden with insurance companies, freeing up finances for investment into other areas of life. Similarly, I infer that the lower the percentage of women living below poverty is, the higher FEA is. \\ 
+\begin{table}[H]
+
+\centering
+\begin{tabular}{lrrrrr}
+
+Variables & Obs & Mean & Std.\ Dev. & Min & Max \\
+\midrule
+Percent Living Below Poverty & 450 & 0 & 1 & -3.2332 & 1.9298 \\
+Total Personal Income & 450 & 0 & 1 & -1.6855 & 2.8353 \\
+Educational Attainment & 450 & 0 & 1 & -2.2096 & 2.7455 \\
+Health Insurance & 450 & 0 & 1 & -3.7875 & 1.6201 \\
+Labor Force Participation Rate & 450 & 0 & 1 & -3.1360 & 2.0972 \\
+Age at First Marriage & 450 & 0 & 1 & -2.6107 & 2.2737 \\
+\textbf{FEA Index} & 450 & 0 & 1 & -2.2322 & 2.4068 \\
+\bottomrule
+\end{tabular}
+\caption{FEA Index: Descriptive Statistics (Z-score standardized)}
+\end{table}
+\indent Census data is collected through annual multi-modal household surveys including mail-in, internet collection, and central collection from state resources.\footnote{For more information, see \href{https://www.census.gov/programs-surveys/gov-finances/technical-documentation/methodology/how-the-data-are-collected.html}{Census: How the Data Are Collected}} IPUMS provides integrated, high-precision microdata from U.S. federal censuses and the American Community Survey.\footnote{For more information, see \href{https://usa.ipums.org/usa/intro.shtml}{IPUMS: What is IPUMS USA?}} The variables of education, income, and insurance coverage are sourced by IPUMS; the percent of women living below poverty, female labor force participation rate, and age at first marriage are sourced by Census data. All data are coded to drop values of ``N/A'' or ``unknown.'' Due to the current availability of data, FEA spans 2015-2023. \\
+\indent Lastly, I collect data from Google Search Trends (GST) from all 50 states in the same 2015-2025 period that I ranked. GST tracks the popularity of searches and normalizes them to 100. In other words, it does not count the frequency of searches in a particular time frame, but instead ranks the popularity of that search on a scale of 0-100 across said time frame. For example, see Figure 3 below. From 2015-2025, the search nationally peaks in July of 2020. Upon investigation of what caused this peak, I find that Ghislaine Maxwell was charged in Manhattan Federal Court for conspiring with Jeffrey Epstein to sexually abuse minors on July 2nd, 2020 \citep{sdny_maxwell2020}. The news of her case is driving up the popularity of sex trafficking searches, as reflected in Figure 3. As I regress on state-year data in my analysis and GST yields data points for each month, I average all data points into the state-year level. \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{Screenshot 2026-04-29 at 6.14.11 PM.png}
+    \caption{Google Search Trends for \textit{``Sex Trafficking.''} Containes data from Jan. 1, 2015 to Jan. 1, 2026. Spike in July 2020 reflects charges against Ghislaine Maxwell.}
+\end{figure}
+\subsection{Empirical Specification}
+\indent I begin with a basic difference-in-difference using one treatment period, that being the years after the overturning of \textit{Roe v Wade}. My control states are those in which the restrictiveness ranking did not change post-\textit{Dobbs}, in other words, states where the ranking has remained constant throughout 2015-2025 (white states in Figure 4). By contrast, my treatment states are those where the restrictiveness ranking has changed (colored states in Figure 4).\\
+\indent To measure how sex trafficking changes as states become \textit{more} restrictive, I drop the few states from my treatment group that experience an overall decrease in abortion restriction post-\textit{Dobbs}, like Minnesota and Missouri (the blue states in Figure 4) and drop states with a net neutral position, like Montana (increased then decreased back to baseline).\footnote{See Appendix for restrictiveness by state.} 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.73\linewidth]{net.png}
+    \caption{Net Change in Abortion Restrictiveness by State (blue indicates a decrease, white indicates no change, red indicates an increase).}
+\end{figure}
+\noindent I will be measuring changes before and after \textit{Roe} was overturned, denoted as pre- and post-\textit{Dobbs}. Controlling for state ($\mu_{s}$) and year ($\lambda_{t}$) fixed effects, my basic difference-in-difference framework is as follows:
+\begin{equation}
+\text{Sex Trafficking}_{s,t}
+=
+\alpha
++ \beta \left( \text{Treatment}_{s}
+\times \text{Post Dobbs}_{t} \right)
++ \mu_{s}
++ \lambda_{t}
++ \varepsilon_{s,t}
+\end{equation}
+The subscript of s denotes states, while t denotes time (year). The coefficient of interest is $\beta$ as this tells us the average effect that states with stricter post-\textit{Dobbs} abortion laws have on sex trafficking awareness, relative to control states. Then, I add the control of female economic agency as shown in equation 2. FEA allows me to hold female economic conditions constant to assess its impact on sex trafficking awareness and whether or not it changes my $\beta$ estimation. 
+\begin{equation}
+\text{Sex Trafficking}_{s,t}
+=
+\alpha
++ \beta \left( \text{Treatment}_{s}
+\times \text{Post Dobbs}_{t} \right)
++ \delta\,\text{FEA}_{s,t}
++ \mu_{s}
++ \lambda_{t}
++ \varepsilon_{s,t}
+\end{equation}
+To check the validity of the following results, I use a second difference-in-difference approach. \cite{diff2} propose a DiD with continuous treatments, occurring at various times for various groups. Because each state has control over their respective abortion laws, the laws can change at different times for different states. Now, there is no single ``treatment'' period being pre- and post-\textit{Dobbs}. Some states changed their abortion laws right as \textit{Roe} was overturned, while other states did not change theirs until several years after. I can now have the treatment period reflect each individual state's timeline. This method also accounts for the direction of change in the treatment group, meaning that I no longer have to drop the three states from my study that did not strictly increase (Minnesota, Missouri, and Montana). Therefore, treatment levels can increase or decrease multiple times, and the intensity of their change is recorded (i.e. increasing by 1 on the restrictive scale vs increasing by 5). \\
+\indent This DiD estimate compares the change in sex trafficking awareness, Y, to the change in the restriction intensity, R. Again, s represents states and t represents year t. We calculate these changes as: 
+\begin{equation}
+\Delta Y_s = Y_{s,t} - Y_{s,t-1}
+\end{equation}
+\begin{equation}
+\Delta R_s = R_{s,t} - R_{s,t-1}
+\end{equation}
+The population is partitioned into movers, M (states where their restriction ranking changed), and stayers, S (states where their restriction ranking remained constant). The DiD estimator first calculates the average change in sex trafficking awareness for stayers, measuring the natural change in search behavior that would have occurred in the absence of treatment: 
+\begin{equation}
+\Delta \bar{Y}_{\mathcal{S}} = \mathbb{E}\left[ \Delta Y_s \,\middle|\, s \in \mathcal{S} \right]
+\end{equation}
+Now, we adjust the average change in sex trafficking awareness for the movers by subtracting the stayer trend to isolate the impact of the restriction treatment:
+\begin{equation}
+\text{Adjusted } \Delta \bar{Y}_{\mathcal{M}} 
+= \mathbb{E}\left[\Delta Y_s \,\middle|\, s \in \mathcal{M}\right]
+- \Delta \bar{Y}_{\mathcal{S}}
+\end{equation}
+Because abortion restriction is a continuous variable, we normalize the dosage by dividing the change in adjusted sex trafficking awareness by the average change in the restriction scale among the movers:
+\begin{equation}
+\Delta \bar{R}_{\mathcal{M}} = \mathbb{E}\left[\Delta R_s \,\middle|\, s \in \mathcal{M}\right]
+\end{equation}
+\begin{equation}
+\hat{\beta} = \frac{\text{Adjusted } \Delta \bar{Y}_{\mathcal{M}}}{\Delta \bar{R}_{\mathcal{M}}}
+\end{equation}  
+\subsection{Parallel Trends Assumption}
+In order to use a DiD regression, the data must pass the parallel trends assumption. In other words, the treatment and control states \textit{must} follow the same trend in the theoretical absence of treatment. The groups can have different baselines, but their trends would move in parallel. To prove this, I test the differences in sex trafficking search popularity of states in which abortion restriction has increased (treated states) and those that did not increase (control states) \textit{before} treatment, that is, before \textit{Roe} was overturned in 2022. If the states are similar and thus follow parallel pre-treatment trends, I will see insignificant effects with 0 likely included in the 95\% confidence interval, signaling that the estimated effect could very well be zero. This proves that there is no significant difference between treated and control states. We can infer that in an absence of treatment, the control and treated states would continue to behave the same. I test placebos from 1-4 years before the overturning of \textit{Roe} in 2022 with $\text{Placebo}_1$ being the differences between treatment and control states one year before treatment (2021-2022), $\text{Placebo}_2$ being two years before treatment (2020-2022), and so on. \\
+\begin{table}[H]
+\centering
+\begin{tabular}{lcccccc}
+
+ & Estimate & SE & Lower 95\% CI & Upper 95\% CI & N & Switchers \\
+\midrule
+$\text{Placebo}_1$ & -0.4088 & 0.8612 & -2.0967 & 1.2791 & 71 & 23 \\
+$\text{Placebo}_2$ & -1.8540 & 1.2058 & -4.2172 & 0.5093 & 68 & 23 \\
+$\text{Placebo}_3$ & -3.1124 & 2.5955 & -8.1996 & 1.9747 & 61 & 21 \\
+$\text{Placebo}_4$ & -1.7585 & 1.3817 & -4.4666 & 0.9496 & 43 & 18 \\
+\midrule
+\multicolumn{7}{l}{\footnotesize Test of joint nullity of the placebos: $p$-value = 0.6169} \\
+\bottomrule
+\end{tabular}
+\caption{Placebo Test Results for Parallel Trends Assumption}
+\end{table}
+\vspace{1em}
+
+\noindent As shown in Table 2, the insignificant joint p-value of 0.62 and all confidence intervals spanning zero proves the parallel trends assumption, ultimately proving the validity of my methodology. 
+\section{Results}
+\subsection{Simple DiD}
+Since FEA only spans the time frame of 2015-2023, I run my difference-in-difference models in two parts assessing both the immediate, short-run effect (including FEA) from 2015-2023, and then test the effect several years post-\textit{Dobbs}, from 2015-2025 (without FEA). 
+\begin{table}
+\centering
+\begin{tabular}{lccc}
+& \multicolumn{2}{c}{\makecell{Immediate Effect \\ (2015--2023)}} & \makecell{Current Effect \\ (2015--2025)} \\
+\cline{2-3} \cline{4-4}
+ & (1) & (2) & (3) \\
+\hline
+
+Treatment $\times$ Post-Dobbs 
+    & 1.463** & 1.430** & 0.770 \\
+    & (0.563) & (0.552) & (0.505) \\
+
+FEA Index 
+    &  & 1.811 &  \\
+    &  & (1.245) &  \\
+
+Constant 
+    & 14.153*** & 14.175*** & 13.687*** \\
+    & (0.059) & (0.059) & (0.086) \\
+
+\hline
+Observations & 423 & 421 & 517 \\
+R-squared & 0.915 & 0.932 & 0.913 \\
+State FE & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes \\
+Clusters & 47 & 47 & 47 \\
+\hline
+
+\multicolumn{4}{p{0.92\linewidth}}{\footnotesize \textit{Notes:} Robust standard errors clustered at the state level in parentheses. *** $p<0.01$, ** $p<0.05$, * $p<0.10$. All specifications include state and year fixed effects. Columns (1) and (2) report immediate post-\textit{Dobbs} effects over 2015--2023. Column (3) reports the longer-run/current effect over 2015--2025.} \\
+\hline
+\end{tabular}
+\caption{Effect of Increased Abortion Restrictiveness on Sex Trafficking Searches (simple DiD)}
+\end{table} 
+In Table 3, column (1) we see that as abortion restrictiveness increases, sex trafficking search popularity increases by 1.46 percentage points relative to states where their abortion restriction has remained constant. Upon adding the control of FEA in column (2), the $\beta$ coefficient remains statistically significant at the 5\% level with little variation in the constant. When female economic agency increases by 1 standard deviation, sex trafficking searches increase by 1.81 percentage points relative to states whose abortion rights remained constant. However, since FEA is not statistically significant, there is a possibility that this estimate could potentially be occurring by chance and not reflect a true effect. Furthermore, the R-squared did not increase much through the inclusion of FEA. The R-squared statistic demonstrates how well your model explains the data (in this case, sex trafficking searches). If female economic agency is an important predictor in sex trafficking searches, we might expect there to be a larger increase in the R-squared. In all three regressions, I control for state and year fixed effects. These absorb all time invariant differences across states and national shocks common to all states. Ultimately, there is a clear positive immediate effect of abortion restrictiveness  on sex trafficking searches. \\
+\indent Column (3) demonstrates that as abortion restrictiveness increases, sex trafficking searches increase by 0.77 percentage points compared to states whose abortion rights remained constant from 2015-2025. Here, the magnitude of the increase in sex trafficking searches has decreased by about half compared to the immediate effect shown in column (1). These findings suggest that while sex trafficking awareness initially spikes post-\textit{Dobbs} for treated states, public interest gradually dissipates and falls back to baseline. 
+
+\subsection{Continuous Treatment DiD}
+Now, I implement a second DiD from \cite{diff2} with continuous treatment effects. As discussed in section 3.2, their approach will allow me to include all 50 states as this methodology accounts for the direction of change in abortion restriction, as well as the magnitude of the change. \\
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lcccccc}
+\toprule
+Years & Estimate & SE & Lower 95\% CI & Upper 95\% CI & N & Switchers \\
+\midrule
+2015-2023 & $1.9238^{**}$ & 0.7584 & 0.4374 & 3.4103 & 78 & 24 \\
+2015-2024 & $1.3234^{*}$ & 0.6818 & -0.0129 & 2.6597 & 75 & 24 \\
+2015-2025 & 0.5459 & 0.5640 & -0.5595 & 1.6513 & 73 & 23 \\
+\bottomrule
+\end{tabular}
+\caption{Effect of Increased Abortion Restrictiveness on Sex Trafficking Searches (continuous DiD)}
+\end{table}
+\vspace{1em}
+The immediate effect from 2015-2023 to the current effect of 2015-2025 depict a similar story to that from Table 3. In Table 4, we can see that immediately post-\textit{Dobbs}, as abortion restriction increases by 1 point on the restrictiveness scale, sex trafficking search popularity increases by 1.92 percentage points compared to states whose restriction remained constant. As we expand this time frame, the magnitude of the effect decreases. The number of observations for each time frame varies due to fewer observations qualifying as we move further from the treatment date. For example, states in which their abortion laws increased in 2024 will not have 3 years of data post law change due to my data capped at 2025 (and that 2027 has not yet happened), whereas states whose abortion laws increased in 2022 \textit{will} have 3 years of post-data. \\
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lcccccc}
+\hline
+Years & Estimate & SE & Lower 95\% CI & Upper 95\% CI & N & Switchers \\
+\hline
+2015--2023 & $1.8824^{**}$ & 0.7514 & 0.4097 & 3.3552 & 78 & 24 \\
+\hline
+\end{tabular}
+\caption{Effect of Increased Abortion Restrictiveness controlling for FEA (regressing on Sex Trafficking Search Residuals)}
+\end{table}
+
+The command derived from \cite{diff2} does not allow conventional controls the same way that a standard regression does. In order to control for FEA, the outcome is regressed on the control, then I use the residuals in the \cite{diff2} DiD. Essentially, I alter my sex trafficking awareness variable by removing the parts that are explained by the FEA index, along with state and year fixed effects. Now, I have created a version of sex trafficking awareness that no longer moves with FEA. \\
+\indent In Table 5, I find that as abortion restrictiveness increases by 1 point on the restriction scale, sex trafficking awareness (after removing variation explained by FEA and fixed effects) increases by 1.88 percentage points, compared to states whose abortion restriction has remained constant. ``Controlling'' for FEA only slightly changes the estimate of the immediate effect from 2015-2023 in Table 4, though not by a meaningful amount. This signals the possibility that FEA is not an accurate or important estimator in sex trafficking awareness, which corroborates my conclusions from Table 3 column (2).
+
+\subsection{Discussion of Results}
+The findings of this paper contradict the initial hypothesis that as abortion laws become stricter, women lose economic agency, resulting in a \textbf{decrease} in sex trafficking awareness (see page 2 for full hypothesis). The results indicate that as access to abortion decreases, searches for sex trafficking increase. Although the fixed effects absorb for all time-invariant state differences and national shocks common to all states in a given year, they do not necessarily soak up \textit{everything}, like time-varying state-specific shocks. For example, some states received much more local media coverage than others, and fixed effects will not catch this because the effect is not the same for all states. \\
+\indent I also must consider the possibility that increased searches do not necessarily translate to increased awareness. There is a debate of the two possibilities that drive Google searches: does Googling `X' imply ignorance of the subject, or is prior knowledge of X a prerequisite for the search itself? Suppose that most people searching the term ``sex trafficking'' are already aware of it— maybe they have learned of it in school, from a friend, or from the news before \textit{Roe} was overturned. Then, their Google search does not reflect an increase in awareness, as they were already aware in the first place. \\
+\indent As for the null results with female economic agency, it is possible that I do not have enough data to detect small changes in the index. 
+Economic changes can take years to alter observable outcomes. Due to the lack of available data in FEA, the index spans 8 years, only 1 year of which is post-\textit{Dobbs}. Therefore, the study likely does not include sufficient post-treatment data to find concrete, significant effects.  
+\section{Conclusion}
+Although the underlying explanations are indefinite, the results of this paper are empirically robust and statistically meaningful. My findings emphasize how awareness of sex trafficking can change due to external influences, such as abortion rights. This paper ultimately highlights the importance of investigating what these outside factors are to identify time periods or populations where individuals are more vulnerable to trafficking. \\
+\indent Future research should examine factors that increase individual sex trafficking risk, potentially investigating the issue using data from trafficking convictions. Although complications arise when using real-world data, such as the under- and misreporting of crimes, the insights found would be highly valuable. Secondly, as sex trafficking would not exist if it were not for Johns, we must research preventative measures on the demand side of the sex market. Preventing the buyers of coerced sex from purchasing people will eliminate the issue at hand. Additionally, enforcing punishments that reflect the gravity of their offense will deter Johns from repeat offenses. \\
+\indent More \textit{economic} research on sex trafficking is highly necessary. Illegal and black markets, including that of sex trafficking, are the results of market failures \citep{undp_fast_2025}. We are not properly allocating capital to account for social and economic costs associated with sex trafficking. Furthermore, we are failing to provide accessible, formal labor for all individuals leading to inadequate financial support of vulnerable populations. While many individuals fail to identify the importance of trafficking research in the field of economics, I conclude that sex trafficking is clearly an issue of economic relevance. \\
+
+
+

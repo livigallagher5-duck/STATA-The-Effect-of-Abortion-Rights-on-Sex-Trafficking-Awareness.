@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+% Sets page layout with 1-inch margins and letter paper size
+\usepackage[letterpaper, margin=1in]{geometry}
+% Ensures proper font encoding for output, improving character representation and hyphenation
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{caption}
+\captionsetup[table]{justification=raggedright, singlelinecheck=false}
+\captionsetup[table]{labelfont=bf,textfont=bf}
+% Loads Latin Modern fonts for high-quality typography
+\usepackage{lmodern}
+% Enhances text appearance with micro-typographic improvements like kerning and spacing
+\usepackage{microtype}
+% Provides advanced mathematical typesetting tools and additional math symbols
+\usepackage{amsmath, amssymb}
+% Enables inclusion and manipulation of external graphics
+\usepackage{graphicx}
+% Nice tables
+\usepackage{booktabs}
+% Customizes page headers and footers
+\usepackage{fancyhdr}
+% Allows formatting of section titles
+\usepackage{titlesec}
+% Provides control over line spacing (e.g., single, one-and-a-half, double)
+\usepackage{setspace}
+% natbib setup for author-year citation style 
+\usepackage[authoryear]{natbib}
+% Enables clickable hyperlinks for references within the document.
+\usepackage[colorlinks=true, urlcolor=blue, citecolor=blue, linkcolor=blue, breaklinks=true]{hyperref}
+% Allow long URLs (e.g., in footnotes) to break across lines cleanly
+\usepackage{xurl}
+% Enables colored text and backgrounds in the document
+\usepackage{xcolor}
+% Configure headers and footers
+\pagestyle{fancy}
+% Increase headheight to accommodate logo
+\setlength{\headheight}{1cm}
+% Left header: Text
+\lhead{LMU Economics 5990\\ Honors Seminar}
+% Right header: Lion logo
+\rhead{\includegraphics[height=1cm]{LMU_SpiritMark_Artwork_RGB-Crimson.png}}
+%Add page number in the footer (e.g., centered)
+\cfoot{\thepage}
+\usepackage{xcolor}
+
+\definecolor{mybg}{RGB}{254,248,245}
+\pagecolor{mybg}
+%%% END PREAMBLE %%%
+\begin{document}
+
+% Title Information 
+\title{How Do Abortion Rights Affect Sex Trafficking Awareness Through Altering Female Economic Agency?}
+\author{Livi Gallagher}
+\date{\today}
+\maketitle
+
+
+\begin{equation}
+\text{Sex Trafficking Searches}
+= 14.15^{***} + \mathbf{1.46^{**}} (\text{Treatment} \times \text{Post-}\textit{Dobbs}) + \mu_{s} + \lambda_{t}
++ \varepsilon_{s,t}
+\end{equation}
+
+\begin{equation}
+\text{Sex Trafficking Searches}
+= 13.69^{***} + \mathbf{0.77} (\text{Treatment} \times \text{Post-}\textit{Dobbs}) + \mu_{s} + \lambda_{t}
++ \varepsilon_{s,t}
+\end{equation}
+
+
+\begin{equation}
+\text{Sex Trafficking Searches}
+= 14.17^{***} + {1.43}^{**} (\text{Treatment} \times \text{Post-}\textit{Dobbs}) + \mathbf{1.81}{FEA} + \mu_{s} + \lambda_{t}
++ \varepsilon_{s,t}
+\end{equation}
+\\ 
+\\
+\\
+\begin{align}
+R^2 &= 0.915 \\
+R^2 &= 0.913 \\
+R^2 &= 0.915
+\end{align}
+
+
+\begin{equation}
+\Delta Y_s = Y_{s,t} - Y_{s,t-1}
+\end{equation}
+
+\begin{equation}
+\Delta R_s = R_{s,t} - R_{s,t-1}
+\end{equation}
+
+\begin{equation}
+\Delta \bar{Y}_{\mathcal{S}} = \mathbb{E}\left[ \Delta Y_s \,\middle|\, s \in \mathcal{S} \right]
+\end{equation}
+
+\begin{equation}
+\text{Adjusted } \Delta \bar{Y}_{\mathcal{M}} 
+= \mathbb{E}\left[\Delta Y_s \,\middle|\, s \in \mathcal{M}\right]
+- \Delta \bar{Y}_{\mathcal{S}}
+\end{equation}
+
+\begin{equation}
+\Delta \bar{R}_{\mathcal{M}} = \mathbb{E}\left[\Delta R_s \,\middle|\, s \in \mathcal{M}\right]
+\end{equation}
+
+\begin{equation}
+\hat{\beta} = \frac{\text{Adjusted } \Delta \bar{Y}_{\mathcal{M}}}{\Delta \bar{R}_{\mathcal{M}}}
+\end{equation}  
+
+
+
+\begin{equation}
+Y_{it}^{\text{resid}} = \alpha + \mathbf{1.882^{**}} \cdot \text{Post}_{it}^{(1)} + \varepsilon_{it}
+\end{equation}
+
+
+
+
+\end{document} 

@@ -1,0 +1,196 @@
+%%% BEGIN PREAMBLE %%%
+\documentclass[12pt]{article}
+% Sets page layout with 1-inch margins and letter paper size
+\usepackage[letterpaper, margin=1in]{geometry}
+% Ensures proper font encoding for output, improving character representation and hyphenation
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{caption}
+\captionsetup[table]{justification=raggedright, singlelinecheck=false}
+\captionsetup[table]{labelfont=bf,textfont=bf}
+% Loads Latin Modern fonts for high-quality typography
+\usepackage{lmodern}
+% Enhances text appearance with micro-typographic improvements like kerning and spacing
+\usepackage{microtype}
+% Provides advanced mathematical typesetting tools and additional math symbols
+\usepackage{amsmath, amssymb}
+% Enables inclusion and manipulation of external graphics
+\usepackage{graphicx}
+% Nice tables
+\usepackage{booktabs}
+% Customizes page headers and footers
+\usepackage{fancyhdr}
+% Allows formatting of section titles
+\usepackage{titlesec}
+% Provides control over line spacing (e.g., single, one-and-a-half, double)
+\usepackage{setspace}
+% natbib setup for author-year citation style 
+\usepackage[authoryear]{natbib}
+% Enables clickable hyperlinks for references within the document.
+\usepackage[colorlinks=true, urlcolor=blue, citecolor=blue, linkcolor=blue, breaklinks=true]{hyperref}
+% Allow long URLs (e.g., in footnotes) to break across lines cleanly
+\usepackage{xurl}
+% Enables colored text and backgrounds in the document
+\usepackage{xcolor}
+% Configure headers and footers
+\pagestyle{fancy}
+% Increase headheight to accommodate logo
+\setlength{\headheight}{1cm}
+% Left header: Text
+\lhead{LMU Economics 5990\\ Honors Seminar}
+% Right header: Lion logo
+\rhead{\includegraphics[height=1cm]{LMU_SpiritMark_Artwork_RGB-Crimson.png}}
+%Add page number in the footer (e.g., centered)
+\cfoot{\thepage}
+%%% END PREAMBLE %%%
+\begin{document}
+
+% Title Information 
+\title{How Do Abortion Rights Affect Sex Trafficking Awareness Through Altering Female Economic Agency? \\[0.5em] 
+\large \textbf{[Extract of Work in Progress]}}
+\author{Livi Gallagher}
+\date{\today}
+\maketitle
+%Use the header
+
+\thispagestyle{fancy}
+\section{Introduction}
+The Oxford English Dictionary defines sex trafficking as ``the action or practice of unlawfully coercing others into performing sex work or providing sexual services, usually involving forcible relocation.''\footnote{For more information, see \href{https://www.oed.com/dictionary/sex-trafficking_n}{OED: Sex Trafficking}} Worldwide, there is estimated to be 27 million people exploited for labor, services, and sex.\footnote{For more information, see \href{https://www.state.gov/reports/2024-trafficking-in-persons-report/}{U.S. Department of State: Trafficking in Persons Report}} Sex traffickers target vulnerable and marginalized individuals, where women and girls account for 96\% of cases.\footnote{For more information, see \href{https://icat.un.org/sites/g/files/tmzbdl461/files/publications/icat-ib-04-v.1.pdf}{ICAT: The Gender Dimensions of Human Trafficking}} Traffickers exploit people who are economically disadvantaged and have little control over their economic outcomes. Factors that can increase sex trafficking risk include poverty, lack of social support, drug use, history of sexual abuse, being academically off-track, living in a shelter or group home, being an immigrant, or having a disability.\footnote{For more information, see \href{https://safesupportivelearning.ed.gov/human-trafficking-americas-schools/risk-factors}{U.S. Department of Education: Risk Factors}}  \\
+\indent I will investigate how female economic agency impacts sex trafficking after the overturn of \textit{Roe v. Wade}. The period after \textit{Roe} is referred to as post-\textit{Dobbs}, as \textit{Dobbs v. Jackson Women’s Health Organization} (2022) is the case ruling that overturned \textit{Roe v. Wade} (1973).\footnote{For more information, see \href{https://reproductiverights.org/cases/scotus-mississippi-abortion-ban-dobbs-jackson-womens-health/}{ReproductiveRights.Org: Dobbs v. Jackson}} I refer to economic agency as an individual's overall control over their economic outcomes and financial freedom. As women lose economic agency, they are forced into situations that put them at risk by seeking outside assistance and likely informal work. An individual could become more dependent on family members, friends, or significant others who may have ill intentions. Alternatively, a young mother may see a job ad posted online that turns out to be a fake, human trafficking scheme. We can expect there to be a causal link between female economic agency and sex trafficking. \\
+\indent There is a general absence of sex trafficking policy, even in developed countries. Policies that exist emphasize punishment on the exploited individual’s Pimp, the seller of illegal sex, while there are little attempts to address the root-cause of sex trafficking: the Johns. “Johns” are what the buyers are called- people driving demand for coerced sex. Illegal markets communicate a broader message of inefficiency. Market inefficiencies convey a clear need for policy intervention. Some women experience barriers entering the job market making them economically vulnerable. Sex trafficking also imposes negative economic externalities such as lost human capital by removing individuals from formal labor sectors.\footnote{For more information, see \href{https://www.iadb.org/en/news/human-traffickings-dirty-profits-and-huge-costs}{IADB: Human Trafficking's Dirty Profits and Huge Costs}} It has negative social and moral outcomes as sex trafficking is a form of severe exploitation with lifelong consequences. Sex trafficking can indirectly affect our whole society and economy. \\
+\indent Specifically, I will be investigating: how does increased abortion restrictiveness affect sex trafficking awareness through altering female economic agency? I will be looking at sex trafficking through the lens of awareness to avoid the complications of data misreporting. As an individual becomes more aware of trafficking, they have greater knowledge to protect themselves therefore lowering their risk. I will look at data from U.S. states using changes in state abortion law in a difference-in-difference model to estimate its affects on sex trafficking awareness, arguing female economic agency as a pathway. I hypothesize that as abortion laws become stricter, women lose economic agency, resulting in a decrease in sex trafficking awareness. To articulate this conclusion, consider the contrary: abortions become more accessible, women gain agency, and their awareness in sex trafficking increases.  As women have improved reproductive healthcare, they have more control over when they have children \citep{baileyandlindo}. This choice of being able to plan ahead allows for advances in employment. When women have children early in their careers, they reduce their working hours and firms invest less into their success \citep{BlauandKhan}. Then, young mothers are disadvantaged in the workforce and have less opportunity for promotions or job migration. It follows that when women have access to reproductive healthcare, including access to abortion, they have a choice in when (and if) they have children, giving them agency over their careers. On average, their economic agency will improve. An advancement in socioeconomic status often increases an individual’s exposure to information and civic engagement, increasing their awareness of social injustices.\footnote{For more information, see \href{https://www.urban.org/urban-wire/civic-engagement-higher-among-americans-who-are-financially-secure}{Urban Institute: Civic Engagement Is Higher among Americans Who Are Financially Secure}}  We can translate this increase in awareness to a decrease in sex trafficking risk, ultimately decreasing the quantity of human capital lost as a result of trafficking. Formal labor force participation will be higher, contributing to societal participation and wellbeing. 
+
+\section{Related Literature}
+Economic research on sex trafficking is slim, primarily due to the complications of data collection \citep{Kristiina}. Difficulties typically arise in measuring human trafficking as a result of inconsistent definitions \citep{Hanson}. Typically, human trafficking is studied as a whole, as opposed to being disaggregated into its various forms. \cite{omar} study human trafficking and immigration patterns where they find that regional migration flows are associated with a higher individual likelihood of being trafficked, and that 20\% of reported human trafficking survivors experienced sex trafficking. \cite{leeandpersson} propose a theoretical model of semi-coerced sex markets. They find that by combining two pre-existing models, the Dutch and Swedish models, we can optimally deter sex trafficking while protecting the right to voluntary sex work through licensing prostitutes (Dutch) and criminalizing Johns who purchase sex from those unlicensed (Swedish). \cite{Jang} use a count time series regression to investigate the driving economic factors for sex trafficking conviction in the United States, finding that the driving factors are the consumer price index (CPI), labor market regulations, and changes in immigration policy. As the CPI rises, conviction counts decrease after approximately 5 months, suggesting that greater economic stress reduces trafficking detection. Changes in labor market regulations and immigration policy increase convictions. While altering immigration policy has an immediate effect, labor market regulations take longer to be reflected through conviction counts due to the process of slower institutional changes. \cite{Nyqviststiina} study individual-level data of survivors of child sex trafficking and find that girls who are more likely to be trafficked come from larger households with more daughters, and tend to be more risk-loving. \\
+\indent The papers that provide sources of my female economic agency variation are \cite{baileyandlindo} and \cite{baileyanddiprete}. \cite{baileyandlindo} investigate how access to various forms of contraception affected women’s education, marital decisions, fertility, and contraception use. The authors find that with increased access, women are having children later in life, there is higher use of contraception, women are getting married 3.7 years later, and educational attainment increases. \cite{baileyanddiprete} explore how the gender wage gap, educational attainment, gender stereotypes and cultural norms, fertility rates and family structure, work habits, and overall economic independence of women has changed over the past 50 years. Women are now more likely to attain an advanced degree compared to men; the gender wage gap has narrowed, though progress has slowed; fertility rates have declined; and marriage rates have fallen. While women remain underrepresented in high-paying jobs, the overall economic independence of women has improved. \\
+\indent My research will contribute to literature on illegal markets, sex crimes, and sex work.  Similar to \cite{leeandpersson}, I hope to highlight the importance of eliminating illegal, coerced sex markets. Like \cite{omar}, I will show how sex trafficking is not random. There are factors, like economic agency, that impact an individual’s risk. My research question is innovative as I will focus on sex trafficking- a fully coerced market; a topic in which little emphasis is placed in the world of economics.
+\section{Planned Methodology}
+\subsection{Data}
+\indent I create a comprehensive data set including all 50 U.S. states, ranking their abortion restrictiveness  across the years 2015-2025. The restrictive scale is sourced from Britannica, though slightly modified.\footnote{See Appendix 4.1 for changes.} The scale is as follows: 0- no abortion laws/legal with no gestational limit, 1- legal before viability, 2- bans at/before 24 weeks, 3- bans at/before 22 weeks, 4- bans at/before 15 weeks, 5- bans at/before 12 weeks, 6- bans at/before 6 weeks, and lastly, 7- full ban. The reason for such categories stems from state interpretation of a viable fetus. While there is much debate, the general time frame for viability is somewhere between 20-28 weeks.\footnote{For more information, see \href{https://www.acog.org/advocacy/facts-are-important/understanding-and-navigating-viability}{ACOG: Viability}} Therefore, some states, like California, protect abortion rights until "fetal viability"as opposed to enforcing a strict cut off like Georgia in the pre-\textit{Dobbs} era banning at 22 weeks. By declaring "fetal viability," there is more freedom and protection in the right to abortions. Most states' abortion restrictions come with certain exceptions to those laws—like in the case of rape or incest, or when the mother's life is at risk. This ranking is based on the legal rights of citizens that do not meet those qualifications. Therefore, the restrictiveness ranking is relevant to healthy pregnancies resulting from consensual sex.  \\
+\indent Similarly, I collect data from Google Search Trends from all 50 states across the same time frame. Upon investigating the popularity of terms similar to sex trafficking, like forced prostitution or sex slavery, there was no fluctuation in search frequency over the 10 years, meaning, there is likely not enough data. Therefore, I will not be including any related terms for sex trafficking. I also collect the same data for human trafficking to use in a control. As I am regressing on state-year data and Google Search Trends yields data points for each month, I average all data points into the state-year level. \\
+\indent For female economic agency (FEA), I create an index variable in which I include average educational attainment, median age at first marriage, female labor force participation rate, average total personal income, health insurance coverage, and percent of female population living below poverty. \cite{baileyanddiprete} show that female educational attainment increases with economic success. There is a clear relationship between education and economic agency: higher education is correlated with higher income, increasing an individual’s economic participation and choice. \cite{baileyanddiprete} also demonstrate that overall economic success increases as marital rates decrease. I include median age at first marriage as later marriage allows more time for educational attainment, career advancement, and asset accumulation. I include female labor force participation rate as having a source of income allows for women to gain economic agency by having a greater say in their finances and economic decisions; they do not have to be dependent on others for their survival. Similarly, as average total personal income rises, so does FEA. Average total personal income is 2025 inflation adjusted, so incomes are comparable across years. Negative values demonstrate the individual reported a net income loss. A value of 1 equates to breaking even. I include health insurance coverage in FEA as when individuals are covered by health insurance, they have more financial freedom. Knowing you have a safety net for expensive, unexpected life events relieves financial stress and allows for increased investments. Instead of saving large sums in the event you must bear all financial responsibility for a health crisis, you can share the financial burden with insurance companies, freeing up finances for investment into other areas of life. Similarly, I infer that the lower the percentage of women living below poverty is, the higher FEA is. \\
+\indent Census data is collected through annual multi-modal household surveys including mail-in, internet collection, and central collection from state resources.\footnote{For more information, see \href{https://www.census.gov/programs-surveys/gov-finances/technical-documentation/methodology/how-the-data-are-collected.html}{Census: How the Data Are Collected}} IPUMS provides integrated, high-precision microdata from U.S. federal censuses and the American Community Survey.\footnote{For more information, see \href{https://usa.ipums.org/usa/intro.shtml}{IPUMS: What is IPUMS USA?}} The variables of education, income, and insurance coverage are sourced by IPUMS; the percent of women living below poverty, female labor force participation rate, and age at first marriage are sourced by Census data. All data are coded to drop values of "N/A" or "unknown." Due to the current availability of data, FEA spans 2015-2023.
+\subsection{Empirical Specification}
+\indent My control states are those in which the restrictiveness ranking did not change post-\textit{Dobbs}, in other words, states where the ranking has remained constant throughout 2015-2025. By contrast, my treatment states are those where the restrictiveness ranking has changed. To measure how sex trafficking changes as states become \textit{more} restrictive, I drop the few states that experience an overall decrease in abortion restriction post-\textit{Dobbs}, like Minnesota and Missouri, and drop states with a net neutral position, like Montana (increased then decreased to same level).\footnote{See Appendix 4.2 for restrictiveness by state.} \\
+\\
+\centerline{\textbf{[END OF EXTRACT - word count: 1981. Full thesis draft available upon request]}} 
+
+%bibliography below
+\clearpage
+\nocite{*}
+\bibliographystyle{apalike}
+\bibliography{main}
+
+%appendix below
+\section{Appendix}
+\subsection{Restrictiveness Ranking}
+\begin{table}[H]
+\centering
+\newsavebox{\regtablebox}
+\sbox{\regtablebox}{%
+\begin{tabular}{p{0.8cm} p{5.5cm} p{6cm}}
+\hline
+\textbf{} & \textbf{Britannica} & \textbf{Modified} \\
+\hline
+0 & Legal with no gestational limit 
+  & No abortion laws/no gestational limit \\
+
+1 & Legal before viability 
+  & Legal before viability \\
+
+2 & Ban at/after 24 weeks 
+  & Ban at/after 24 weeks \\
+
+3 & Ban at/after 22 weeks 
+  & Ban at/after 22 weeks \\
+
+4 & Ban after 15--20 weeks 
+  & Ban at/after 15 weeks \\
+
+5 & Ban after 12 weeks 
+  & Ban at/after 12 weeks \\
+
+6 & Ban after 6 weeks 
+  & Ban at/after 6 weeks \\
+
+7 & Full ban 
+  & Full ban \\
+
+\hline
+\multicolumn{3}{p{12.3cm}}{\footnotesize \textit{Note:} Britannica classifications obtained from 
+\url{https://www.britannica.com/science/US-abortion-rights-by-state-2236312}} 
+
+\end{tabular}
+}
+
+\begin{minipage}{\wd\regtablebox}
+\captionsetup{justification=raggedright,singlelinecheck=false}
+\caption{Modified Britannica Restrictiveness Ranking}
+\small
+\usebox{\regtablebox}
+\end{minipage}
+
+\end{table} 
+
+\subsection{Restrictiveness by State}
+\includegraphics[width=0.5\textwidth]{image_2.png}
+\includegraphics[width=0.5\textwidth]{image_3.png}
+\includegraphics[width=0.5\textwidth]{image_4.png}
+\includegraphics[width=0.5\textwidth]{image_5.png}
+\includegraphics[width=0.5\textwidth]{image_6.png}
+\includegraphics[width=0.5\textwidth]{image_7.png}
+\includegraphics[width=0.5\textwidth]{image_8.png}
+\includegraphics[width=0.5\textwidth]{image_9.png}
+\includegraphics[width=0.5\textwidth]{image_10.png}
+\includegraphics[width=0.5\textwidth]{image_11.png}
+\includegraphics[width=0.5\textwidth]{image_12.png}
+\includegraphics[width=0.5\textwidth]{image_13.png}
+\includegraphics[width=0.5\textwidth]{image_14.png}
+\includegraphics[width=0.5\textwidth]{image_27.png}
+\includegraphics[width=0.5\textwidth]{image_16.png}
+\includegraphics[width=0.5\textwidth]{image_17.png}
+\includegraphics[width=0.5\textwidth]{image_18.png}
+\includegraphics[width=0.5\textwidth]{image_19.png}
+\includegraphics[width=0.5\textwidth]{image_28.png}
+\includegraphics[width=0.5\textwidth]{image_21.png}
+\includegraphics[width=0.5\textwidth]{image_22.png}
+\includegraphics[width=0.5\textwidth]{image_23.png}
+\includegraphics[width=0.5\textwidth]{image_24.png}
+\includegraphics[width=0.5\textwidth]{image_25.png}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{image_26.png}
+\end{figure}
+\\
+\begin{minipage}{\linewidth}
+\textit{*Note, the restrictiveness of states not included above remained constant: Alaska (0), California (1), Colorado (1), Connecticut (1), Delaware (1), Hawaii (1), Illinois (1), Kansas (3), Maine (1), Maryland (1), Massachusetts (2), Michigan (1), Nevada (2), New Jersey (0), New Mexico (0), New York (2), Ohio (3), Oregon (0), Pennsylvania (2), Rhode Island (1), Vermont (0), Virginia (1), Washington (1), Wisconsin (3), Wyoming (1).}
+\end{minipage}
+
+\subsection{Descriptive Statistics}
+\begin{table}[H]
+\centering
+\newsavebox{\regtablebox}
+\sbox{\regtablebox}{%
+\begin{tabular}{lrrrrr}
+\toprule
+Variables & Obs & Mean & Std.\ Dev. & Min & Max \\
+\midrule
+Percent Living Below Poverty & 450 & 0 & 1 & -3.2332 & 1.9298 \\
+Total Personal Income & 450 & 0 & 1 & -1.6855 & 2.8353 \\
+Educational Attainment & 450 & 0 & 1 & -2.2096 & 2.7455 \\
+Health Insurance & 450 & 0 & 1 & -3.7875 & 1.6201 \\
+Labor Force Participation Rate & 450 & 0 & 1 & -3.1360 & 2.0972 \\
+Age at First Marriage & 450 & 0 & 1 & -2.6107 & 2.2737 \\
+\textbf{FEA Index} & 450 & 0 & 1 & -2.2322 & 2.4068 \\
+\bottomrule
+\end{tabular}
+}
+
+\begin{minipage}{\wd\regtablebox}
+\captionsetup{justification=raggedright,singlelinecheck=false}
+\caption{FEA Index: Descriptive Statistics (Z-score standardized)}
+\small
+\usebox{\regtablebox}
+\end{minipage}
+\end{table} 
+\end{document} 

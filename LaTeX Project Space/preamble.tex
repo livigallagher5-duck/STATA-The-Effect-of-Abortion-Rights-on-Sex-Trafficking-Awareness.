@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+% Sets page layout with 0.5-inch margins and letter paper size
+\usepackage[letterpaper, tmargin=0.75in,bmargin=1in,rmargin=0.5in,lmargin=0.5in]{geometry}
+% Ensures proper font encoding for output, improving character representation and hyphenation
+\usepackage[T1]{fontenc}
+\usepackage{float}
+% Loads Latin Modern fonts for high-quality typography
+\usepackage{lmodern}
+% Enhances text appearance with micro-typographic improvements like kerning and spacing
+\usepackage{microtype}
+% Provides advanced mathematical typesetting tools and additional math symbols
+\usepackage{amsmath, amssymb}
+% Enables inclusion and manipulation of external graphics
+\usepackage{graphicx}
+% Nice tables
+\usepackage{makecell}
+\usepackage{booktabs}
+% Customizes page headers and footers
+\usepackage{fancyhdr}
+% Allows formatting of section titles
+\usepackage{titlesec}
+% Provides control over line spacing (e.g., single, one-and-a-half, double)
+\usepackage{setspace}
+% natbib setup for author-year citation style 
+\usepackage[authoryear]{natbib}
+\bibpunct{(}{)}{;}{a}{,}{,}
+% Enables clickable hyperlinks for references within the document.
+\usepackage[colorlinks=true, urlcolor=black, citecolor=lmublue, linkcolor=lmublue, breaklinks=true]{hyperref} 
+% Allow long URLs (e.g., in footnotes) to break across lines cleanly
+\usepackage{xurl}
+% Enables colored text and backgrounds in the document
+\usepackage{xcolor}
+\definecolor{lmublue}{HTML}{0076A5}
+\definecolor{lmured}{HTML}{AB0C2F}
+% Allows control of section heading styling
+\usepackage{sectsty}
+\sectionfont{\color{lmured}}
+\subsectionfont{\color{lmured}}
+\subsubsectionfont{\color{lmured}}
+\pagestyle{fancy}
+% Increase headheight to accommodate logo
+\setlength{\headheight}{0.3in}
+%for block diagram at the beginning of methodology
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning}
+%for my tables
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+
+\pagestyle{fancy}
+\raggedbottom
+
+
+\setlength{\intextsep}{0pt}
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % Clear the title text
+\renewcommand{\absnamepos}{empty} % Remove the space where the title was
+
+%Add page number in the footer (e.g., centered)
+\renewcommand{\footrulewidth}{0.2pt}
+\renewcommand{\headrulewidth}{0.2pt}
+\rfoot{\footnotesize{\thepage}}
+\lfoot{\footnotesize{LMU Undergraduate Economics Research Journal, 2026}}
+\cfoot{}
